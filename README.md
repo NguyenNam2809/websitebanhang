@@ -1,109 +1,145 @@
-## Advance E-commerce website in  Laravel 7
+# 🧑‍💻 Thông tin sinh viên
+- Họ tên: Nguyễn Phương Nam
+- Mã SV: 23010028
+- Lớp: K17_CNTT1
+- link repo: https://github.com/NguyenNam2809/websitebanhang
 
+# 📋 Mô tả dự án
+Dự án "Jelly Boutique" là một ứng dụng web thương mại điện tử chuyên về kinh doanh thời trang , cho phép khách hàng mua sắm thời trang trực tuyến và quản trị viên quản lý sản phẩm, đơn hàng. Ứng dụng này cung cấp các tính năng như đăng ký, đăng nhập, quản lý sản phẩm, giỏ hàng, đặt hàng, thanh toán và xem lịch sử mua hàng.
 
-#### Setup video : https://www.youtube.com/watch?v=URX5D1A5XQ4&t=19s
+## 📌 Mục tiêu dự án
 
-#### Demo video :
-https://youtu.be/c5a_wrvJSJo
+- Tạo ra một nền tảng bán hàng trực tuyến thân thiện, tiện dụng.
+- Hỗ trợ hoạt động quảng bá thương hiệu và tương tác khách hàng hiệu quả.
+- Tích hợp các tính năng cần thiết như: tìm kiếm, đánh giá, giỏ hàng, thanh toán điện tử,...
+- Phù hợp cho các cửa hàng vừa và nhỏ, hướng tới khả năng mở rộng trong tương lai.
+---
 
-#### Full tutorial :
-https://www.youtube.com/watch?v=FdAMucaks64&list=PLIFG3IUe1Zxo8Zvju3_kJJvoKSaIP_SC_&index=1&t=44s
+## 🌟 Tính năng nổi bật
 
+### Người dùng (khách hàng):
+- Đăng ký / đăng nhập (hỗ trợ tài khoản Google, Facebook)
+- Tìm kiếm, lọc, sắp xếp sản phẩm theo thương hiệu, giá, tên,...
+- Xem thông tin chi tiết sản phẩm và bài viết liên quan
+- Thêm sản phẩm vào giỏ hàng, sử dụng mã giảm giá
+- Mua hàng và thanh toán (COD hoặc PayPal)
+- Đánh giá sản phẩm, bình luận bài viết
+- Xem lịch sử đơn hàng
 
+### Quản trị viên:
+- Quản lý danh mục sản phẩm, thương hiệu, sản phẩm
+- Quản lý đơn hàng và trạng thái giao hàng
+- Quản lý tài khoản người dùng, phân quyền
+- Quản lý banner, bài viết, thẻ bài viết, bình luận
+- Quản lý mã giảm giá, phí vận chuyển
+- Thống kê doanh thu theo thời gian
 
-### Features :
-- ##### PWA (progressive web app)
-====== FRONT-END =======
+---
 
-- Responsive Layout
-- Shopping Cart, Wishlist, Product Reviews
-- Coupons & Discounts
-- Product attributes: cost price, promotion price, stock, size...
-- Blog: category, tag, content, web page 
-- Module/Extension: Shipping, payment, discount, ...
-- Upload manager: banner, images,..
-- SEO support: customer URL
-- Newsletter management
-- Contact forms with the real-time notification (Laravel Pusher)
-- Related Products, Recommendations for you in our categories
-- A Product search form
-- Laravel Socialite implement(Facebook, Google & twitter) & Customer login
-- Product Share and follow from different social platform...
-- Payment integration(Paypal)
-- Order Tracking system
-- Multi-level comment system
-many more......
+## 🛠️ Công nghệ sử dụng
 
-======= ADMIN =======
+- **Back-end:** Laravel Framework (PHP 8.x), MySQL
+- **Front-end:** Blade, HTML5, CSS3, JavaScript, jQuery
+- **API tích hợp:**
+  - Đăng nhập Google, Facebook
+  - Thanh toán PayPal
+  - Chat Facebook Messenger
+- **Môi trường phát triển:** XAMPP (Apache, MySQL, PHP)
+- **Mô hình kiến trúc:** MVC
 
-- Admin roles, permission
-- Product manager
-- Media manager using unisharp laravel file manager
-- Banner manager
-- Order management
-- Category management
-- Brand management
-- Shipping Management
-- Review Management
-- Blog, Category & Tag manager
-- User Management
-- Coupon Management
-- System config: email setting, info shop, maintain status,...
-- Line Chart & Pie chart ...
-- Generate order in pdf form...
-- Real time message & notification
-- Profile Settings
-Many more....
+---
 
+## ⚙️ Cài đặt & triển khai
 
-======= USER DASHBOARD =======
+### 📦 Yêu cầu hệ thống
 
+- PHP: >= 8.2
+- Composer: >= 2.0
+- Node.js: >= 18.0
+- NPM: >= 9.0
+- MySQL: >= 8.0 (hoặc PostgreSQL >= 13.0)
+- Web Server: Apache/Nginx
 
-- Order management
-- Review Management
-- Comment Management
-- Profile Settings
+### 🔧 Cài đặt
 
-### Set up :
+```bash
+git clone https://github.com/your-username/jelly-boutique.git
+cd jelly-boutique
+cp .env.example .env
+composer install
+php artisan key:generate
+php artisan migrate
+npm install && npm run dev
+php artisan serve
 
-1. Clone the repo and cd into it
-2. composer install
-3. Rename or copy .env.example file to .env
-4. php artisan key:generate
-5. Set your database credentials in your .env file
-6. Set your Braintree credentials in your .env file if you want to use PayPal
-7. Import db file(database/e-shop.sql) into your database (mysql,sql)
-8. npm install
-9. npm run watch
-10. run command[laravel file manager]:-  php artisan storage:link
-11. Edit .env file :- remove APP_URL
-10. php artisan serve or use virtual host
-11. Visit localhost:8000 in your browser
-12. Visit /admin if you want to access the admin panel. Admin Email/Password: admin@gmail.com/1111. User Email/Password: user@gmail.com/1111
+### Cấu hình DB trong file .env
+DB_CONNECTION=mysql
+ DB_HOST=127.0.0.1
+ DB_PORT=3306
+ DB_DATABASE=jelly_boutique
+ DB_USERNAME=your_user
+ DB_PASSWORD=your_pass
+```
 
-<p style="text-align:center">Thank You so much for your time !!!</p>
-
-
-### Screenshots :
-![screencapture-e-shop-loc-admin-2020-08-15-15_47_37](https://user-images.githubusercontent.com/29488275/90719413-13b82200-e2d4-11ea-8ca0-f0e5551c4c9d.png)
-
-![screencapture-e-shop-loc-admin-category-2020-08-14-19_45_55](https://user-images.githubusercontent.com/29488275/90719470-3813fe80-e2d4-11ea-8f63-e6001855a945.png)
-
-![screencapture-e-shop-loc-admin-product-2020-08-14-19_44_49](https://user-images.githubusercontent.com/29488275/90719534-61348f00-e2d4-11ea-8a81-409daee0ad94.png)
-
-![screencapture-e-shop-loc-user-order-show-1-2020-08-14-18_57_06](https://user-images.githubusercontent.com/29488275/90719557-71e50500-e2d4-11ea-97cf-befb1d525643.png)
-
-![screencapture-e-shop-loc-user-profile-2020-08-14-18_58_06](https://user-images.githubusercontent.com/29488275/90719563-7a3d4000-e2d4-11ea-9e6a-56caac13b146.png)
-
-![screencapture-e-shop-loc-admin-post-2020-08-14-16_00_07](https://user-images.githubusercontent.com/29488275/90719572-81644e00-e2d4-11ea-9fe5-3325ab427f88.png)
-
-![screencapture-e-shop-loc-2020-08-14-18_19_46](https://user-images.githubusercontent.com/29488275/90719631-a1940d00-e2d4-11ea-89a3-eb36960d687d.png)
-
-![screencapture-e-shop-loc-blog-2020-08-14-18_36_21](https://user-images.githubusercontent.com/29488275/90719648-a8228480-e2d4-11ea-9c57-5ed7aef50e26.png)
-
-![screencapture-e-shop-loc-blog-detail-where-can-i-get-some-2020-08-14-18_43_01](https://user-images.githubusercontent.com/29488275/90719658-ace73880-e2d4-11ea-9cb2-13f2b3b0c4d2.png)
-
-![screencapture-e-shop-loc-product-track-2020-08-14-18_51_07](https://user-images.githubusercontent.com/29488275/90719682-bbcdeb00-e2d4-11ea-8e4e-7d6bfab1c421.png)
-
-
-
+# 📁 Cấu trúc thư mục dự án Laravel
+```bash
+jelly-boutique/
+├── app/                      # Chứa mã nguồn chính của ứng dụng
+│   ├── Console/             # Các lệnh Artisan tùy chỉnh
+│   ├── Exceptions/          # Xử lý ngoại lệ
+│   ├── Http/                # Controller, Middleware, Request
+│   │   ├── Controllers/     # Controller người dùng và admin
+│   │   ├── Middleware/      # Middleware bảo vệ route
+│   │   └── Requests/        # Validate dữ liệu đầu vào
+│   ├── Models/              # Các model Eloquent (User, Product, Order, ...)
+│   └── Providers/           # Service providers
+│
+├── bootstrap/               # Khởi tạo framework Laravel
+│
+├── config/                  # Các file cấu hình (database, mail, app, ...)
+│
+├── database/                # Cấu trúc và dữ liệu CSDL
+│   ├── migrations/          # File tạo bảng
+│   ├── seeders/             # Dữ liệu mẫu
+│   └── factories/           # Tạo dữ liệu test
+│
+├── public/                  # Thư mục public (ảnh, js, css)
+│   ├── assets/              # Tệp JS/CSS/IMG tĩnh
+│   └── index.php            # Entry point chính của ứng dụng
+│
+├── resources/              
+│   ├── views/               # Giao diện Blade (frontend & admin)
+│   │   ├── layouts/         # Giao diện chung
+│   │   ├── user/            # Giao diện người dùng
+│   │   └── admin/           # Giao diện admin
+│   ├── lang/                # Ngôn ngữ (đa ngôn ngữ nếu có)
+│   └── sass/                # SCSS nếu dùng Laravel Mix
+│
+├── routes/                 
+│   ├── web.php              # Route chính của website
+│   └── api.php              # Route cho API nếu có
+│
+├── storage/                 # Lưu file tạm, log, cache, upload,...
+│
+├── tests/                   # Test tự động (Feature, Unit)
+│
+├── .env                     # Biến môi trường (DB, SMTP,...)
+├── artisan                  # CLI tool của Laravel
+├── composer.json            # Quản lý package PHP
+└── package.json             # Quản lý JS/CSS (nếu dùng npm/yarn)
+```
+# 🧭 Sơ đồ và Biểu đồ Hệ Thống
+### 📌 Biểu đồ trình tự chức năng đăng kí
+![Image](https://github.com/user-attachments/assets/39baf549-d5a1-4f41-93b5-581603381a27)
+### 📌 Biểu đồ trình tự chức năng đăng nhập
+![Image](https://github.com/user-attachments/assets/ce19e1ca-57b4-47b2-b34d-4da6fce98a98)
+### 📌 Biểu đồ trình tự chức năng Tìm kiếm sản phẩm
+![Image](https://github.com/user-attachments/assets/497de78c-9f24-44e0-a95b-1bfbd066fb3a)
+### 📌 Biểu đồ trình tự chức năng giỏ hàng
+![Image](https://github.com/user-attachments/assets/6e3f9b32-4499-482f-aeef-b34238c73d19)
+### 📌 Biểu đồ lớp phân tích chức năng quản lí bài viết
+![Image](https://github.com/user-attachments/assets/7713bd58-59fc-4804-92f5-149dbd2c1fb9)
+### 📌 Biểu đồ lớp phân tích chức năng quản lí sản phẩm
+![Image](https://github.com/user-attachments/assets/b7715192-b9e7-4124-be8d-a08952731328)
+### 📌 Biểu đồ lớp phân tích chức năng quản lí đơn hàng
+![Image](https://github.com/user-attachments/assets/c27d0530-aecf-4266-ac9e-3ac5dd019e75)
